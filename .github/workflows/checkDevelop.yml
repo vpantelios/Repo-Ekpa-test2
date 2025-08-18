@@ -4,3 +4,13 @@ on:
   push:
     branches:
       - develop
+
+permissions:
+  contents: write
+
+jobs:
+  build_and_tests:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout code
+        uses: actions/checkout@v4
