@@ -1,5 +1,5 @@
 name: Test CI-CD
-run-name: commit ${{ github.sha }} of branch ${{ github.ref}} by @${{ github.actor }}
+run-name: commit ${{ github.sha }} of branch ${{ github.ref }} by @${{ github.actor }}
 
 on: 
   push:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
 
       - name: Set up JDK 21
         uses: actions/setup-java@v2
