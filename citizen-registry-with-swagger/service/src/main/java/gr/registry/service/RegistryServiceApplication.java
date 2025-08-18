@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 /** Εκκίνηση RESTful υπηρεσίας μητρώου πολιτών. */
 @SpringBootApplication(scanBasePackages = "gr.registry")
 @EntityScan(basePackages = "gr.registry.domain")
-@ComponentScan("gr.registry")
+/**@ComponentScan("gr.registry")   */
 public class RegistryServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(RegistryServiceApplication.class, args);
