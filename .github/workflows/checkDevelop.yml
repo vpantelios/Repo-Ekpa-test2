@@ -24,9 +24,10 @@ jobs:
           distribution: 'adopt'
 
       - name: Compile, Unit Test and Install
-        id: unit-tests
-        run: mvn clean install -e -X
+        working-directory: ./citizen-registry-with-swagger
+        run: mvn clean install
 
       - name: Build with Maven
+        working-directory: ./citizen-registry-with-swagger
         run: mvn -B package --file pom.xml
        
