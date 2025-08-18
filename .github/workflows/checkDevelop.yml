@@ -4,6 +4,7 @@ run-name: commit ${{ github.sha }} of branch ${{ github.ref}} by @${{ github.act
 on: 
   push:
     branches:
+      - master
       - develop
 
 permissions:
@@ -20,6 +21,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '21'
-          distribution: 'adopt'
+          distribution: 'temurin'
 
-        
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
