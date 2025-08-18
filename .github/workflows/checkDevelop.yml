@@ -25,7 +25,7 @@ jobs:
 
       - name: Compile, Unit Test and Install
         working-directory: ./citizen-registry-with-swagger
-        run: mvn clean install
+        run: mvn clean install -e -X
 
       - name: Build with Maven
         working-directory: ./citizen-registry-with-swagger
